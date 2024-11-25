@@ -1,6 +1,5 @@
 package com.example;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +8,7 @@ import org.mockito.Mock;
 
 
 @RunWith(Parameterized.class)
-public class LionTestParam {
+public class LionParamTest {
 
     @Mock
     Feline feline;
@@ -17,7 +16,7 @@ public class LionTestParam {
     private final String sex;
     private final boolean hasMane;
 
-    public LionTestParam(String sex, boolean hasMane) {
+    public LionParamTest(String sex, boolean hasMane) {
         this.sex = sex;
         this.hasMane = hasMane;
 
@@ -37,6 +36,4 @@ public class LionTestParam {
         Lion lion = new Lion(feline, sex);
         Assert.assertEquals("Ошибка теста на гриву", hasMane, lion.doesHaveMane());
     }
-
-
 }

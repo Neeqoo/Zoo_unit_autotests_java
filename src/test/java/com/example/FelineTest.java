@@ -4,12 +4,15 @@ package com.example;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class FelineTest {
 
     @Test
     public void testEatMeat() throws Exception {
         Feline feline = new Feline();
-        Assert.assertEquals("Неверный список еды", feline.getFood("Хищник"), feline.eatMeat());
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        Assert.assertEquals("Неверный список еды", feline.eatMeat(), expectedFood);
     }
 
     @Test
